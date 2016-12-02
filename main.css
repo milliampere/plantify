@@ -1,12 +1,83 @@
-body {
+/* General */
+body, html {
+	width: 100%;
+	height: 100%;
+	background: #FFF;
 	font: 16px/1.5 Arial;
+} 
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+  border: 1px solid red;
 }
 
-/*Meny*/
-.navigation {
-	list-style-type: none;
+.logo {
+	width: 100px;
+}
+
+
+header > h1, h3 {
+	margin: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex: 1;
+    flex-flow: row wrap;
+
+}
+
+section > div {
+	background: grey;
+	flex: 1;
+}
+ 
+/* Color and margin */ 
+header, section, footer {
+	background: #a16d84;
+}
+
+
+
+footer {
+	height: 100px;
+}
+
+
+
+
+
+/**** Meny ****/
+nav {
 	position: absolute;
 	top: 0;
 	right: 0;
 	width: auto;
 }
+
+
+.navigation ul {
+	list-style-type: none;
+	margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+	display: inline;
+	margin-left: 10px;
+}
+
+.navigation li a {
+	font-size: 1.1rem;
+	color: #000;
+	text-decoration: none;
+}
+
+.navigation li a:hover {
+    color: #8e8e8e;
+}
+
