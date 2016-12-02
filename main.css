@@ -1,0 +1,12 @@
+body {
+	font: 16px/1.5 Arial;
+}
+
+/*Meny*/
+.navigation {
+	list-style-type: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: auto;
+}
