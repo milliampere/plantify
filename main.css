@@ -1,12 +1,14 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css?family=Arvo');
+@import url('https://fonts.googleapis.com/css?family=Open-Sans');
 
 /* General */
 body, html {
 	width: 100%;
 	height: 100%;
 	background: #FFF;
-	font: 16px/1.5 Arial;
+	font: 16px/1.5 'Open Sans', sans-serif;
+	font-weight: 400;
 } 
 
 h1, h2, h3, h4, h5, h6 {
@@ -15,135 +17,91 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/**** Main ****/
-section {
-    display: inline-flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-	align-items: stretch;   /*Align y-axis*/ 
-    margin: 0 32px;
+/* Stylar alla länkar */ 
+a {
+	color: #e65f68;
+	text-decoration: none;
 }
-
-section > div {
-	background: white;
-}
- 
-/* Color and margin */ 
-section, footer {
-	background: #FFF;
+a:hover {
+    color: #e65f68;
 }
 
 
-.first {
-	min-height: 300px;
+/* Stylar alla tables */
+th {
+    border: 1px dotted #e65f68;
+    padding: 12px;
+    font-weight: 100;
+}
+thead th {
+	font-weight: 500;
+	background: #e65f68;
 }
 
-.first h4 {
-	color: #000;
-	font-weight: 100;
-}
 
-.first > div:last-child{
-	overflow: hidden;
-}
-
-.first > div {
-	width: 49%;
-}
-
-.first img {
+/* Stylar alla forms */ 
+input, textarea {
 	width: 100%;
-
-}
-
-@media all and (max-width: 800px) {
-	.first img {
-		width: 350px;
-		padding: 10px 0 0 0;
-	}
-}
-
-@media all and (max-width: 600px) {
-  section > * {
-	flex: 1 100%;
-	}
-}
-
-
-.second {
-	margin-bottom: 8px;
-}
-.second > article {
-	width: 30%;
-}
-
-.second article {
-	font-size: 0.9rem;
-}
-
-.second article img{
-	float: left; 
-	width: 80px; 
-	height: 80px; 
-	margin: 0 10px 10px 0; 
-	padding: 4px; 
-	border: 1px solid #DEDEDE;
-}
-
-.more {
-	text-align:right;
-}
-
-/**** Header ****/
-header {
-	background: #ead9bc;
-}
-
-header > h1 {
-	margin: 0;
-}
-
-.logo {
-	width: 100px;
-	margin: 8px 0 0 32px;
+	margin: 8px 0;
+	padding: 8px 16px;
+	box-sizing: border-box;
 }
 
 
 
-
-/**** Meny ****/
+/* Navigation */
 nav {
 	position: absolute;
-	top: 0;
-	right: 32px;
+	top: 8px;
+	right: 40px;
 	width: auto;
 	font-family: "Arvo", Georgia;
+	padding-left: 50px;
 }
-
-
 .navigation ul {
 	list-style-type: none;
 	margin: 0;
     padding: 0;
 }
-
 .navigation li {
 	display: inline;
-	margin-left: 10px;
+	margin-left: 16px;
 }
-
 .navigation li a {
 	font-size: 1.1rem;
 	color: #e65f68;
 	text-decoration: none;
 }
-
 .navigation a:hover {
     color: #5bb2a2;
 }
 
 
-/**** Footer ****/
+
+/* Header */
+header {
+	background: #ead9bc;
+}
+.logo {
+	width: 100px;
+	margin: 16px 0 16px 40px;
+}
+
+
+/* Main */
+main {
+	margin: 10px 40px 40px 40px;
+}
+section {
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+	align-items: stretch;   /*Align y-axis*/ 
+    margin: 0;
+}
+
+
+/* Footer */
 body > footer {
 	background: #5bb2a2;
 	padding: 10px 32px;
@@ -151,15 +109,85 @@ body > footer {
 }
 
 
-
-
-/***** Links *****/ 
-a {
-	color: #e65f68;
-	text-decoration: none;
+/* Two columns */
+.first div:first-child {
+	padding-right: 16px;
+	box-sizing: border-box;
+	width: 55%;
+}
+.first div:last-child {
+	padding-top: 24px;
+	box-sizing: border-box;
+	width: 40%;
+}
+.first img {
+	width: 100%;
+	padding: 4px; 
+	border: 1px solid #DEDEDE;
 }
 
-a:hover {
-    color: #e65f68;
+
+
+/* Three columns */
+.second > div {
+	width: 30%;
+	margin-bottom: 8px;
 }
+.second div {
+	font-size: 1rem;
+	font-weight: 100;
+}
+.second div img{
+	float: left; 
+	width: 80px; 
+	height: 80px; 
+	margin: 0 10px 10px 0; 
+	padding: 4px; 
+	border: 1px solid #DEDEDE;
+}
+.more {
+	text-align:right;
+}
+
+
+/* Stylar listan på themes-sidan */ 
+.themes, .themes li {
+	list-style-type: none;
+	margin: 0;
+    padding: 0;
+}
+.themes h4 {
+	 padding: 0;
+}
+
+/* Splashigare text på första sidan */
+.splash {
+	font-size: 1.2rem;
+	font-weight: 100;
+}
+
+/* Ikoner till sociala medier */
+a .icon {
+	width: 60px;
+}
+
+
+/* Responsive, smaller devices */
+@media all and (max-width: 600px) {
+  	section > * {
+		flex: 1 100%;
+	}
+	section {
+		margin-left: 0.9rem;
+		margin-right: 0.9rem;
+	}
+	header .logo {
+		width: 70px;
+		margin-left: 0.9rem;
+	}
+}
+
+
+
+
 
