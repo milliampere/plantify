@@ -83,7 +83,7 @@ header {
 	background: #ead9bc;
 }
 .logo {
-	width: 100px;
+	width: 280px;
 	margin: 16px 0 16px 40px;
 }
 
@@ -182,7 +182,7 @@ a .icon {
 		margin-right: 0.9rem;
 	}
 	header .logo {
-		width: 70px;
+		width: 230px;
 		margin-left: 0.9rem;
 	}
 }
