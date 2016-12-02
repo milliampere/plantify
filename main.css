@@ -1,15 +1,23 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+
 /* General */
 body, html {
 	width: 100%;
 	height: 100%;
-	background: #e65f68;
+	background: #FFF;
 	font: 16px/1.5 Arial;
 } 
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Arvo", Georgia;
+	color: #5bb2a2;
+}
 
 
 /**** Main ****/
 section {
-    display: flex;
+    display: inline-flex;
     flex-flow: row wrap;
     justify-content: space-between;
 	align-items: stretch;   /*Align y-axis*/ 
@@ -17,7 +25,7 @@ section {
 }
 
 section > div {
-	background: gray;
+	background: white;
 }
  
 /* Color and margin */ 
@@ -25,18 +33,46 @@ section, footer {
 	background: #FFF;
 }
 
+
 .first {
-	height: 300px;
+	min-height: 300px;
+}
+
+.first h4 {
+	color: #000;
+	font-weight: 100;
 }
 
 .first > div:last-child{
-	background: url(img/potted-flower.jpg)
+	overflow: hidden;
 }
 
 .first > div {
-	width: 50%;
+	width: 49%;
 }
 
+.first img {
+	width: 100%;
+
+}
+
+@media all and (max-width: 800px) {
+	.first img {
+		width: 350px;
+		padding: 10px 0 0 0;
+	}
+}
+
+@media all and (max-width: 600px) {
+  section > * {
+	flex: 1 100%;
+	}
+}
+
+
+.second {
+	margin-bottom: 8px;
+}
 .second > article {
 	width: 30%;
 }
@@ -60,7 +96,7 @@ section, footer {
 
 /**** Header ****/
 header {
-	background: #e7e7e7;
+	background: #ead9bc;
 }
 
 header > h1 {
@@ -79,8 +115,9 @@ header > h1 {
 nav {
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: 32px;
 	width: auto;
+	font-family: "Arvo", Georgia;
 }
 
 
@@ -97,8 +134,12 @@ nav {
 
 .navigation li a {
 	font-size: 1.1rem;
-	color: #000;
+	color: #e65f68;
 	text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #5bb2a2;
 }
 
 
@@ -106,6 +147,7 @@ nav {
 body > footer {
 	background: #5bb2a2;
 	padding: 10px 32px;
+	color: #FFF;
 }
 
 
@@ -113,23 +155,11 @@ body > footer {
 
 /***** Links *****/ 
 a {
-	color: #000;
+	color: #e65f68;
 	text-decoration: none;
 }
 
 a:hover {
-    color: #8e8e8e;
+    color: #e65f68;
 }
 
-
-
-
-
-
-/*Not used */ 
-
-.wrapper {
-  max-width: 1200px;
-  margin: auto;
-  border: 1px solid red;
-}
