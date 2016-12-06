@@ -121,7 +121,7 @@ body > footer {
 	width: 40%;
 }
 .first img {
-	width: 100%;
+	max-width: 100%;
 	padding: 4px; 
 	border: 1px solid #DEDEDE;
 }
@@ -139,12 +139,12 @@ body > footer {
 }
 .second div img{
 	float: left; 
-	width: 80px; 
-	height: 80px; 
+	max-width: 100%;
 	margin: 0 10px 10px 0; 
 	padding: 4px; 
 	border: 1px solid #DEDEDE;
 }
+
 .more {
 	text-align:right;
 }
@@ -173,18 +173,16 @@ a .icon {
 
 
 /* Responsive, smaller devices */
-@media all and (max-width: 600px) {
+@media (max-width: 45em) {
   	section > * {
 		flex: 1 100%;
 	}
-	section {
-		margin-left: 0.9rem;
-		margin-right: 0.9rem;
-	}
+	/*
 	header .logo {
 		width: 230px;
 		margin-left: 0.9rem;
 	}
+	*/
 }
 
 
