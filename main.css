@@ -82,10 +82,12 @@ nav {
 header {
 	background: #ead9bc;
 }
-.logo {
-	width: 280px;
+
+header picture img {
+	width: 300px;
 	margin: 16px 0 16px 40px;
 }
+
 
 
 /* Main */
@@ -172,20 +174,19 @@ a .icon {
 }
 
 
-/* Responsive, smaller devices */
+/* Responsive, medium devices */
 @media (max-width: 45em) {
   	section > * {
 		flex: 1 100%;
 	}
-	/*
-	header .logo {
-		width: 230px;
-		margin-left: 0.9rem;
-	}
-	*/
 }
 
-
+/* Responsive, smaller devices */
+@media (max-width: 20em) {
+	header picture img {
+		width: 50%;
+	}
+}
 
 
 
