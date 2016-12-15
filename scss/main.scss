@@ -1,0 +1,213 @@
+@import "responsive";
+@import "mixins";
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+@import url('https://fonts.googleapis.com/css?family=Open-Sans');
+
+/* General */
+body, html {
+	width: 100%;
+	height: 100%;
+	background: #FFF;
+	font: 16px/1.5 'Open Sans', sans-serif;
+	font-weight: 400;
+} 
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Arvo", Georgia;
+	color: #5bb2a2;
+}
+
+
+/* Stylar alla länkar */ 
+a {
+	color: #e65f68;
+	text-decoration: none;
+}
+a:hover {
+    color: #e65f68;
+}
+
+
+/* Stylar alla tables */
+th {
+    border: 1px dotted #e65f68;
+    padding: 12px;
+    font-weight: 100;
+}
+thead th {
+	font-weight: 500;
+	background: #e65f68;
+}
+
+
+/* Stylar alla forms */ 
+input, textarea {
+	width: 100%;
+	margin: 8px 0;
+	padding: 8px 16px;
+	box-sizing: border-box;
+}
+
+
+
+/* Navigation */
+nav {
+	position: absolute;
+	top: 8px;
+	right: 40px;
+	width: auto;
+	font-family: "Arvo", Georgia;
+	padding-left: 50px;
+}
+.navigation ul {
+	list-style-type: none;
+	margin: 0;
+    padding: 0;
+}
+.navigation li {
+	display: inline;
+	margin-left: 16px;
+}
+.navigation li a {
+	font-size: 1.1rem;
+	color: #e65f68;
+	text-decoration: none;
+}
+.navigation a:hover {
+    color: #5bb2a2;
+}
+
+
+
+/* Header */
+header {
+	background: #ead9bc;
+}
+
+header img {
+	width: 300px;
+	margin: 16px 0 16px 40px;
+}
+
+
+
+/* Main */
+main {
+	margin: 10px 40px 40px 40px;
+}
+section {
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+	align-items: stretch;   /*Align y-axis*/ 
+    margin: 0;
+}
+
+
+/* Footer */
+body > footer {
+	background: #5bb2a2;
+	padding: 10px 32px;
+	color: #FFF;
+}
+
+
+/* Two columns */
+.first div:first-child {
+	padding-right: 16px;
+	box-sizing: border-box;
+	width: 55%;
+}
+.first div:last-child {
+	padding-top: 24px;
+	box-sizing: border-box;
+	width: 40%;
+}
+.first img {
+	max-width: 100%;
+	padding: 4px; 
+	border: 1px solid #DEDEDE;
+}
+
+
+
+/* Three columns */
+.second > div {
+	width: 30%;
+	margin-bottom: 8px;
+}
+.second div {
+	font-size: 1rem;
+	font-weight: 100;
+}
+.second div img{
+	float: left; 
+	max-width: 100%;
+	margin: 0 10px 10px 0; 
+	padding: 4px; 
+	border: 1px solid #DEDEDE;
+}
+
+.more {
+	text-align:right;
+}
+
+
+/* Stylar listan på themes-sidan */ 
+.themes, .themes li {
+	list-style-type: none;
+	margin: 0;
+    padding: 0;
+}
+.themes h4 {
+	 padding: 0;
+}
+
+/* Splashigare text på första sidan */
+.splash {
+	font-size: 1.2rem;
+	font-weight: 100;
+}
+
+/* Ikoner till sociala medier */
+a .icon {
+	width: 60px;
+}
+
+
+/* Responsive, medium devices */
+@media (max-width: 45em) {
+  	section > * {
+		flex: 1 100%;
+	}
+}
+
+/* Responsive, smaller devices */
+@media (max-width: 40em) {
+	nav {
+		padding-left: 0; 
+	}
+	header img {
+		width: 200px;
+	}
+}
+
+
+  /* hide mobile version by default */
+.small-screen {
+    display: none;
+  }
+  /* when screen is less than 600px wide
+     show mobile version and hide desktop */
+  @media (max-width: 40em) {
+	.small-screen {
+      display: inline-block;
+    }
+	.large-screen {
+      display: none;
+    }
+  }
+
+
